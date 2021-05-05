@@ -19,4 +19,3 @@ require 'csv'
         )
     end
 
-gf
