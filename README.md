@@ -1,24 +1,34 @@
-# README
+## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Introduction
+Displays information of about 800 pokemons 
 
-* Ruby version
+# Full Documentation with Postman 
+https://documenter.getpostman.com/view/15686431/TzRPk9pM
 
-* System dependencies
+# Ruby version
+ruby '3.0.1'
 
-* Configuration
+# Database
+ - env_local = sqlite3
+ - env_production = postgres
 
-* Database creation
+# Features
+ - List of Pokemons and their information
+ - Pagination
+ - Pagination meta data for fetch()
 
-* Database initialization
+# How to setup locally
+To set up this application locally,
+ - Clone the application from git at https://github.com/Claudius007/pokemon_api.git
+ - Run bundle install in your terminal to ensure the gem dependecies are installed
+ - Run rails sever
 
-* How to run the test suite
+# How to run the test
+Run 'rails test' in the terminal
 
-* Services (job queues, cache servers, search engines, etc.)
+# Support
+If you need support on how to use the pmdpokemonapi send email at mofehintoluwaclaudius@gmail.com
 
-* Deployment instructions
 
-* ...
