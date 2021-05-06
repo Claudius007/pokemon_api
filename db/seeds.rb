@@ -1,7 +1,7 @@
 require 'csv'
  
     filename  = File.join Rails.root, "lib/tasks/seeds/pokemon.csv"
-        CSV.freach(filename, headers: true) do |row| 
+        CSV.foreach(filename, headers: true) do |row| 
         Pokemon.create( 
                 number: row[0],
                 name: row[1],
