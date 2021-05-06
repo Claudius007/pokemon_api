@@ -38,6 +38,14 @@ To set up this application locally,
 
 Run 'rails test' in the terminal
 
+# Requests
+
+GET: <https://pmdpokemonapi.herokuapp.com/api/v1/pokemons>
+GET: <https://pmdpokemonapi.herokuapp.com/api/v1/pokemons/1>
+POST: <https://pmdpokemonapi.herokuapp.com/api/v1/pokemons>
+PUT: <https://pmdpokemonapi.herokuapp.com/api/v1/pokemons/1>
+DEL: <https://pmdpokemonapi.herokuapp.com/api/v1/pokemons/3>
+
 # Support
 
 If you need support on how to use the pmdpokemonapi send email at mofehintoluwaclaudius@gmail.com
