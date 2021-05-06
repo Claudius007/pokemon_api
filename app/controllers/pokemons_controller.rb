@@ -1,19 +1,19 @@
 class PokemonsController < ApplicationController
   before_action :set_pokemon, only: [:show, :update, :destroy]
 
-  # GET /pokemons
+  # GET api/v1/pokemons
   def index
       @pokemons = Pokemon.page(params[:page] ? params[:page].to_i: 1)
   
        render json: {pokemons:@pokemons, meta:pagination_meta(@pokemons)}
   end
 
-  # GET /pokemons/1
+  # GET api/v1/pokemons/1
   def show
     render json: @pokemon
   end
 
-  # POST /pokemons
+  # POST api/v1/pokemons/
   def create
     @pokemon = Pokemon.new(pokemon_params)
 
@@ -24,7 +24,7 @@ class PokemonsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /pokemons/1
+  # PATCH/PUT api/v1/pokemons/1
   def update
     if @pokemon.update(pokemon_params)
       render json: @pokemon
@@ -33,7 +33,7 @@ class PokemonsController < ApplicationController
     end
   end
 
-  # DELETE /pokemons/1
+  # DELETE api/v1/pokemons/1
   def destroy
     @pokemon.destroy
   end
@@ -49,6 +49,7 @@ class PokemonsController < ApplicationController
       params.require(:pokemon).permit(:number, :name, :type1, :type2, :total, :hp, :attack, :defense, :sp_Atk, :sp_Def, :speed, :generation, :legendary)
     end
 
+    #pagination meta 
     def pagination_meta(object){              
       current_page: object.current_page,        
       next_page: object.next_page,        
